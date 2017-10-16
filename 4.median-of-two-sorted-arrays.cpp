@@ -35,7 +35,7 @@ public:
 
         int index_1 = min(size_1, kth / 2);
         int index_2 = kth - index_1;
-        if (*(start1 + index_1 - 1) > *(start2 + index_2 - 1)) 
+        if (*(start1 + index_1 - 1) > *(start2 + index_2 - 1))
             return Kth(start1, size_1 ,start2 + index_2, size_2 - index_2, kth - index_2);
         return Kth(start1 + index_1, size_1 - index_1, start2, index_2, kth - index_1);
     }
