@@ -9,7 +9,6 @@
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-        if (head == NULL || head->next == NULL) return head;
         ListNode **temp = &head, *pointer1 = NULL, *pointer2 = NULL;
         while ((pointer1 = *temp) && (pointer2 = pointer1->next)) {
             pointer1->next = pointer2->next;
