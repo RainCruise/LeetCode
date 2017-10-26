@@ -22,7 +22,6 @@ public:
             head->next = nn;
             preN = head;
             head = nn;
-
         }
         return dummy->next;
     }
