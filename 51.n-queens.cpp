@@ -1,4 +1,4 @@
-//Backtrace + Recersion
+//Backtrack + Recersion
 class Solution {
 public:
     vector<vector<string>> solveNQueens(int n) {
