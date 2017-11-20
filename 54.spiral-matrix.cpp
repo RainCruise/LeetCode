@@ -1,11 +1,10 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        vector<int> result;
+        if (matrix.empty()) return {};
         int m = matrix.size();
-        if (m == 0) return result;
         int n = matrix[0].size();
-        if (n == 0) return result;
+        vector<int> result(m * n);
         char direction = 'r'; //direction
         int l = 0, r = n - 1, u = 1, d = m - 1; //limit of 4 directions
         int i = 0, j = -1;
@@ -35,7 +34,7 @@ public:
                     direction = 'r';
                 }
             }
-            result.push_back(matrix[i][j]);
+            result[k] = matrix[i][j]; //much faster than push_back
         }
         return result;
     }
